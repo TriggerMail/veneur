@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/getsentry/sentry-go"
 	"github.com/sirupsen/logrus"
 	"github.com/stripe/veneur/v14"

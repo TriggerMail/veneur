@@ -21,7 +21,7 @@ import (
 
 	"crypto/rand"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/araddon/dateparse"
 	"github.com/sirupsen/logrus"
 	"github.com/stripe/veneur/v14/protocol"
@@ -680,7 +680,7 @@ func sendSSF(client *trace.Client, span *ssf.SSFSpan) error {
 	return <-done
 }
 
-// newDatadogTCPWriter is adapted from https://github.com/DataDog/datadog-go/blob/master/statsd/udp.go
+// newDatadogTCPWriter is adapted from https://github.com/DataDog/datadog-go/v5/blob/master/statsd/udp.go
 func newDatadogTCPWriter(addr string) (*datadogTCPWriter, error) {
 	tcpAddr, err := net.ResolveTCPAddr("tcp", addr)
 	if err != nil {
@@ -711,7 +711,7 @@ func (w *datadogTCPWriter) Close() error {
 	return w.conn.Close()
 }
 
-// newDatadogTCPWriter is adapted from https://github.com/DataDog/datadog-go/blob/master/statsd/udp.go
+// newDatadogTCPWriter is adapted from https://github.com/DataDog/datadog-go/v5/blob/master/statsd/udp.go
 func newDatadogGrpcWriter(netAddr net.Addr, addr string, proxyAddr net.Addr) (*datadogGrpcWriter, error) {
 	dialAddr := netAddr.String()
 	grpcDialOptions := []grpc.DialOption{grpc.WithBlock(), grpc.WithInsecure()}
@@ -813,7 +813,7 @@ func sendStatsd(netAddr net.Addr, addr string, span *ssf.SSFSpan, useGrpc bool, 
 		}
 	}
 	//Using Close() instead of Flush() avoids dropping metrics and avoids a potential race condition as called out here:
-	//https://github.com/DataDog/datadog-go/pull/120
+	//https://github.com/DataDog/datadog-go/v5/pull/120
 	client.Close()
 	return nil
 }

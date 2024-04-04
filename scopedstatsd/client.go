@@ -3,7 +3,7 @@ package scopedstatsd
 import (
 	"time"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/stripe/veneur/v14/ssf"
 )
 

@@ -14,7 +14,7 @@ import (
 
 	"sync/atomic"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/stripe/veneur/v14/protocol"
 	"github.com/stripe/veneur/v14/ssf"
 )
@@ -49,7 +49,7 @@ type flushNotifier struct {
 // represents a pump for span packets from user code to the network
 // (whether it be UDP or streaming sockets, with or without buffers).
 //
-// Structure
+// # Structure
 //
 // A Client is composed of two parts (each with its own purpose): A
 // serialization part providing backpressure (the front end) and a
