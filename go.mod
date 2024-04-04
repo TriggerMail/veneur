@@ -1,9 +1,9 @@
 module github.com/stripe/veneur/v14
 
-go 1.18
+go 1.22
 
 require (
-	github.com/DataDog/datadog-go v3.7.2+incompatible
+	github.com/DataDog/datadog-go/v5 v5.5.0
 	github.com/Shopify/sarama v1.15.0
 	github.com/araddon/dateparse v0.0.0-20180318191655-f58c961370c5
 	github.com/aws/aws-sdk-go v1.34.0
@@ -32,8 +32,8 @@ require (
 	github.com/satori/go.uuid v1.2.1-0.20180103174451-36e9d2ebbde5
 	github.com/segmentio/fasthash v1.0.0
 	github.com/signalfx/golib/v3 v3.3.36
-	github.com/sirupsen/logrus v1.6.0
-	github.com/stretchr/testify v1.6.1
+	github.com/sirupsen/logrus v1.7.0
+	github.com/stretchr/testify v1.8.1
 	github.com/theckman/go-flock v0.0.0-20170522022801-6de226b0d5f0
 	github.com/zenazn/goji v0.9.1-0.20160507202103-64eb34159fe5
 	goji.io v2.0.2+incompatible
@@ -43,7 +43,7 @@ require (
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.26.0-rc.1
 	gopkg.in/yaml.v2 v2.3.0
-	gopkg.in/yaml.v3 v3.0.0-20200605160147-a5ece683394c
+	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/api v0.20.0
 	k8s.io/apimachinery v0.20.0
 	k8s.io/client-go v0.20.0
@@ -51,6 +51,7 @@ require (
 )
 
 require (
+	github.com/Microsoft/go-winio v0.5.0 // indirect
 	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.6 // indirect
@@ -86,7 +87,6 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/juju/errors v0.0.0-20181118221551-089d3ea4e4d5 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
 	github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/miekg/dns v1.1.25 // indirect

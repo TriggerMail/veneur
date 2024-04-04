@@ -3,7 +3,7 @@ package main
 import (
 	"sort"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 )
 
 type inMemoryStat interface {

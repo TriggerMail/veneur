@@ -5,7 +5,7 @@ import (
 	"flag"
 	"time"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/sirupsen/logrus"
 	"github.com/stripe/veneur/v14/sources/openmetrics"
 )
@@ -35,13 +35,15 @@ func main() {
 		logrus.SetLevel(logrus.DebugLevel)
 	}
 
-	statsClient, err := statsd.New(*statsHost, statsd.WithoutTelemetry())
-	if err != nil {
-		logrus.Fatal(err.Error())
-	}
+	var namespace string
 
 	if *prefix != "" {
-		statsClient.Namespace = *prefix
+		namespace = *prefix
+	}
+
+	statsClient, err := statsd.New(*statsHost, statsd.WithoutTelemetry(), statsd.WithNamespace(namespace))
+	if err != nil {
+		logrus.Fatal(err.Error())
 	}
 
 	cfg, err := prometheusConfigFromArguments()

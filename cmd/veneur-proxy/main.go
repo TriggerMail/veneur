@@ -9,7 +9,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/hashicorp/consul/api"
 	"github.com/sirupsen/logrus"
 	"github.com/stripe/veneur/v14/diagnostics"

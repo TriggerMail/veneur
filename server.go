@@ -22,7 +22,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/DataDog/datadog-go/statsd"
+	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/segmentio/fasthash/fnv1a"
 	"github.com/sirupsen/logrus"
 	"github.com/zenazn/goji/bind"
